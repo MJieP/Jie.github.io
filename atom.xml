@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>明明的Blog</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-08-28T14:50:22.568Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>明明</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>电容</title>
+    <link href="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/"/>
+    <id>http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/</id>
+    <published>2022-08-28T05:42:51.000Z</published>
+    <updated>2022-08-28T14:50:22.568Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="电容笔记-电容外观及部分特性"><a href="#电容笔记-电容外观及部分特性" class="headerlink" title="电容笔记-电容外观及部分特性"></a>电容笔记-电容外观及部分特性</h2><p>在做电路中经常能遇到不同种类的电容，下面总结不同种类电容的特点，以及如何通过外观大概区分它们。由于电容种类繁多，归类可能略有遗漏和偏差。</p><h3 id="电容根据绝缘介质可以做如下分类"><a href="#电容根据绝缘介质可以做如下分类" class="headerlink" title="电容根据绝缘介质可以做如下分类"></a>电容根据绝缘介质可以做如下分类</h3><ul><li>铝电解电容<br>铝电解电容是将附有氧化膜<span id="more"></span>的铝箔和浸有电解液的衬垫纸，与阴极箔叠片一起卷绕而成。特点是具有容量大、耐电压高、性价比高，常见的封装有贴片型和直插型。<br>贴片铝电解电容一般为白色金属外壳，黑色字符。直插型铝电解电容有普通低频电容(一般为黑壳白字)、黑色高频电容(黑壳黄字，比低频电容黑一些)和绿色高频电容(绿壳黄字)，高频铝电解电容也有紫色外壳的。普通的低频电解电容器在10kHz左右便开始呈现感性，在开关电源滤波时，为了满足大容量的需求，可以选用与低频电解电容相比低ESR的高频铝电解电容，但是高频铝电解电容耐压不如低频铝电解电容，通常在150V以下。<figure><img src="./贴片铝电解电容.png" width=200/ height=160/><img src="./低频直插.png" width=200/ height=160/><img src="./黑高频.png" width=200/ height=160/><!-- <img src="./绿高频.png" width=200/ height=160/> --><img src = 'https://s3.bmp.ovh/imgs/2022/08/28/b02b4e306a27a27b.png' ></figure>上面所说铝电解电容均为液态电解质，液体电解质那样高温下液体挥发，最后导致电容器爆浆。电解质为固态导电聚合物的铝电解电容又称为固态电容，导电聚合物的导电性能远远高于液态电解液，ESR也更低，但是耐压大多在50V以下，自愈能力也较差。固态电容的外壳形状与贴片铝电解电容类似，但是字符颜色一般为彩色，有贴片型和直插型两种封装。<figure><img src="./固态1.png" width=200/ height=160/><img src="./固态2.png" width=200/ height=160/><img src="./固态3.png" width=200/ height=160/></figure>对于大容量(通常>200uF)，高耐压(通常>200V)的铝电解电容，电极的引出方式略有不同，根据外观可以分为牛角型电解电容和螺栓型铝电解电容(容量通常在2000uF以上)。<figure><img src="./牛角.png" width=200/ height=160/><img src="./螺栓.png" width=200/ height=160/></figure></li><li>钽电容<br>钽电容使用金属钽做介质，将钽粉压制成型，在高温炉中烧结成阳极体，其工作电解质为硝酸锰溶液经高温分解形成MnO2，通过石墨层作为引出连接用。钽电容的ESL极小，内部没有电解液，很适合在高温下工作，但是耐压极低，通常不超过50V。钽电容也有直插和贴片两种封装类型。贴片大多为黄色外壳，也有黑色外壳(阴极材料为高分子聚合物)，直插的钽电容比较少见。<figure><img src="./钽电容1.png" width=200/ height=160/><img src="./钽电容2.png" width=200/ height=160/><img src="./钽电容3.png" width=200/ height=160/></figure></li><li>陶瓷电容<br>多层陶瓷电容又名MLCC，是由印好电极（内电极）的陶瓷介质膜片以错位的方式叠合起来，经过一次性高温烧结形成陶瓷芯片，再在芯片的两端封上金属层（外电极），从而形成一个类似独石的结构体。同样，陶瓷电容也有直插和贴片两种封装，其直插封装型也叫独石电容，不同厂家独石电容的外观略有不同。<figure><img src="./MLCC1.png" width=200/ height=160/><img src="./MLCC2.png" width=200/ height=160/><img src="./MLCC3.png" width=200/ height=160/><img src="./MLCC4.png" width=200/ height=160/></figure>  陶瓷电容在不同温度、时间、直流偏压下，容值都会发生变化，不同频率的阻抗和ESR也不同。根据温度特性，可以将陶瓷电容分为不同的温度等级。只有一层介质的陶瓷电容又称为瓷片电容，瓷片电容一般为砖红色扁平圆片状，体积小，耐压比独石电容高，有一种高压瓷片电容可以用来做安规电容(Y电容)，外观一般为蓝色。<figure><img src="./瓷片电容.png" width=200/ height=160/><img src="./Y电容.png" width=200/ height=160/></figure></li><li>薄膜电容<br>塑料薄膜电容，简称为薄膜电容或FK电容，以塑料薄膜为电介质。绝缘阻抗高，介质损失小，耐压值高。薄膜电容种类较多，按电极和电解质的材料可将薄膜电容分为金属化聚酯薄膜电容(涤纶电容)、金属化聚丙烯容(MKP电容)、聚丙烯电容(CBB电容)。涤纶电容一般为绿色，MKP电容常见的是黄色、黑色或者是蓝色的长方体外壳封装，常用来作安规电容，黄色一般做X电容，蓝色做Y电容，CBB电容外观一般为深红色。<br><figure><img src="./涤纶电容.png" width=200/ height=160/><img src="./X电容.png" width=200/ height=160/><img src="./CBB电容.png" width=200/ height=160/></figure><br>薄膜电容还有薄膜微调电容、薄膜可变电容等。</li><li>其他<br>其他介质的电容，比如云母介质的可调电容，纸介电容，空气介质电容。<h3 id="铝电解电容、钽电容、陶瓷电容不同特性的比较"><a href="#铝电解电容、钽电容、陶瓷电容不同特性的比较" class="headerlink" title="铝电解电容、钽电容、陶瓷电容不同特性的比较"></a>铝电解电容、钽电容、陶瓷电容不同特性的比较</h3><figure><img src="./表格.png"></figure> </li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;电容笔记-电容外观及部分特性&quot;&gt;&lt;a href=&quot;#电容笔记-电容外观及部分特性&quot; class=&quot;headerlink&quot; title=&quot;电容笔记-电容外观及部分特性&quot;&gt;&lt;/a&gt;电容笔记-电容外观及部分特性&lt;/h2&gt;&lt;p&gt;在做电路中经常能遇到不同种类的电容，下面总结不同种类电容的特点，以及如何通过外观大概区分它们。由于电容种类繁多，归类可能略有遗漏和偏差。&lt;/p&gt;
+&lt;h3 id=&quot;电容根据绝缘介质可以做如下分类&quot;&gt;&lt;a href=&quot;#电容根据绝缘介质可以做如下分类&quot; class=&quot;headerlink&quot; title=&quot;电容根据绝缘介质可以做如下分类&quot;&gt;&lt;/a&gt;电容根据绝缘介质可以做如下分类&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;铝电解电容&lt;br&gt;铝电解电容是将附有氧化膜</summary>
+    
+    
+    
+    <category term="无源器件" scheme="http://example.com/categories/%E6%97%A0%E6%BA%90%E5%99%A8%E4%BB%B6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>my first</title>
+    <link href="http://example.com/2022/08/27/my-first/"/>
+    <id>http://example.com/2022/08/27/my-first/</id>
+    <published>2022-08-27T11:03:46.000Z</published>
+    <updated>2022-08-28T14:50:11.495Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ssss"><a href="#ssss" class="headerlink" title="ssss"></a>ssss</h2><p>sda</p><script type="math/tex; mode=display">\nabla^2 f = 0</script><h2 id="电磁场与电磁波学习心得"><a href="#电磁场与电磁波学习心得" class="headerlink" title="电磁场与电磁波学习心得"></a>电磁场与电磁波学习心得</h2><p>我在本科二年级时学习电磁场与电磁波这门课，但是由于前半部分内容在场论和大学物理中有所涉猎，所以没能给予足够的重视，在加上其他的原因，到学期末并没能良好的掌握其中的基本概念和分析方法，<span id="more"></span>以至于期末考试分数创下史低，甚至还导致对复杂的场方程感到惧怕。在后面学习的过程中，由于缺乏基础的知识，经常陷入到数学计算中，而对一些电磁现象的物理意义不能理解，借助华中科技大学周克定教授等人翻译的《电磁场与电磁波》这本书重新学习。<br></p><p>与许多电磁场教材相同，除了矢量分析的内容，全书大致可以分成两个部分：静态场、时变电磁场。静态场讲解静电场、恒定电流、静磁场。时变电磁场部分，针对麦克斯韦方程的解，重点研究自由空间中均匀平面波的传播、波在传输线和波导中的传播、以及天线辐射的电磁波。对于时变电磁场后面两部分内容，还会通过微波技术基础和天线原理这两门课详细研究，尽管如此，本书还是针对基本的理论对其做了十分清楚的阐述。<br></p><h2 id="矢量场的分类"><a href="#矢量场的分类" class="headerlink" title="矢量场的分类"></a>矢量场的分类</h2><p>对于一个矢量场，如果他的旋度和散度确定，结合边界条件，就可以唯一确定这个矢量场。<br><br>在研究矢量场的问题时，应该首先知道场的性质，以便使用合适的方法，在不便于直接求解场时，需要借助其位函数间接求解。根据散度和旋度，可以将场分为以下四类，下面结论属于是老生常谈了：<br></p><ul><li>$\nabla \cdot \vec{F} = 0$，$\nabla \times \vec{F} = 0$<br><br>无电荷媒质中的静电场和无电流媒质中的磁场，都属于这类场。<br><br>由于矢量场的旋度为零，它可以由另外一个标量场$f$的梯度表示，即$\vec{F} = -\nabla f$，同时由于散度也为零，可以得到拉普拉斯方程<script type="math/tex; mode=display">\nabla^2 f = 0</script>为了求解这类场，需要先结合边界条件求解拉普拉斯方程。</li><li>$\nabla \cdot \vec{F} \neq 0$，$\nabla \times \vec{F} = 0$<br><br>含电荷的区域的静电场，就属于此类场。<br><br>同样的，由于旋度为零，它可以表示为$\vec{F} = -\nabla f$，尽管散度不为零，可以写成$\nabla \cdot \vec{F} = \rho$，上式中$\rho$可以是一个常数或者已知函数，这样就可以得到泊松方程<script type="math/tex; mode=display">\nabla^2 f = -\rho</script>因此，为了求解这类场，需要先结合边界条件求解泊松方程。</li><li>$\nabla \cdot \vec{F} = 0$，$\nabla \times \vec{F} \neq 0$<br><br>载流导体内部的磁场就属于这类场。<br><br>由于场的散度为零，它可以由另外一个矢量$\vec{A}$的旋度表示，即$\vec{F}=\nabla \times \vec{A}$，由于旋度不为零，可以将其写为$\nabla \times \vec{F} = \vec{J}$，根据矢量恒等式可以得到：$\nabla(\nabla \vec{A}) - \nabla^2 \vec{A} = \vec{J}$，为了使描述$\vec{F}$场的$\vec{A}$矢量完全确定，还需要定义其散度，如果我们约定$\nabla \cdot \vec{A}=0$，这一约定也称为库伦规范，就可以得到矢泊松方程<script type="math/tex; mode=display">\nabla^2 \vec{A} = -\vec{J}</script>为了求解这类场，我们需要先求解矢泊松方程，然后算出$\vec{F}$。<br></li><li>$\nabla \cdot \vec{F} \neq 0$，$\nabla \times \vec{F} \neq 0$<br><br>可压缩媒质中的流体动力场是这类场的例子。(我也不知道这是什么23333)<br><br>此类场可以看作是两个矢量场的叠加，这两个矢量场分别满足上面第二类和第三类场的性质，因此，可以按照上面的方法来求解。<br></li></ul><h2 id="静态场"><a href="#静态场" class="headerlink" title="静态场"></a>静态场</h2><p>静电场和静磁场的研究思路大致相同，从库仑定律和毕奥-萨伐尔等实验定律出发，我们研究场的通量和环量及其相应的定律，场的位函数(标量位或者是矢量位)，场对处于其中物质的作用，边界条件，以及场的能量，此外，仿照电路的概念，我们还引入磁路以便简化问题。在恒定电流中，我们通过对电流连续性方程和电动势的研究，得出集总参数电路中的基本定律，即基尔霍夫电流和电压定律。<br><br>由于物理学的基础，我对一些概念有先入为主的认识，但是其中的逻辑关系却很模糊。</p><ul><li>在静电场中，可以把所有物质分为两类：导体和电介质。<br><br>孤立导体处于电场中时，感应电荷产生的电场会与外部电场平衡，从而导致导体内部不存在电场和电荷密度。当构成电介质的分子正点中心和负电中心不重合时，介质在电场中会被极化。为了求解由于介质极化产生的电场，我们应该首先得到其位函数，而为了计算电介质外的电位，我们又定义极化矢量$\vec{P}$，它的物理意义是单位体积内的电偶极矩数。经过计算我们可以得到电位是一个面积分和一个体积分的代数和<script type="math/tex; mode=display">V=\frac{1}{4\pi\varepsilon_0}\oint_{s'}\frac{\vec{P}\cdot\vec{a}_n}{R}ds' - \frac{1}{4\pi\varepsilon_0}\int_{v'}\frac{\nabla'\cdot\vec{P}}{R}dv'</script>仿照使用自由电荷密度表示电位的形式，我们将$\rho_{sb}=\vec{P}\cdot\vec{a}_n$和$\rho_{vb}=-\nabla’\cdot\vec{P}$定义为束缚面电荷密度和束缚体电荷密度，这样电介质的极化导致了束缚电荷的分布。<br><br>当自由电荷和束缚电荷同时存在时，根据自由空间中的高斯定理可以得到<script type="math/tex; mode=display">\nabla\cdot\vec{E} = \frac{\rho_v+\rho_{vb}}{\varepsilon_0}=\frac{\rho_v-\nabla\cdot\vec{P}}{\varepsilon_0}</script>化简后为$\nabla\cdot(\varepsilon_0\vec{E}+\vec{P})=\rho_v$，因此，对于任意媒质中电通量密度可以得到一个通用的定义$\vec{D}=\varepsilon_0\vec{E}+\vec{P}$，以包含极化的影响，这样一来$\nabla\cdot\vec{D}$就可以总是代表任意媒质中的自由电荷密度。对于线性均匀各向同性的介质，$\vec{P}$和$\vec{E}$成正比，通过引入相对电容率$\varepsilon_r$，可以得到更加简化的形式$\vec{D}=\varepsilon_0\varepsilon_r\vec{E}=\varepsilon\vec{E}$。通过把$\varepsilon_0$换成$\varepsilon$，就可以把自由空间中的方程式推广，这是电磁学追求数学表达形式一致性的体现之一。<br></li></ul><p>我们总是从理想情况入手，研究完全导体($\sigma=\infty$)和完全电介质($\sigma=0$)，即无耗条件下波导方程的解，在一般的条件下，我们引入其他的变量，以便保证数学函数表示式的相似性和简洁性。例如<br></p><script type="math/tex; mode=display">\sigma=\infty</script>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;ssss&quot;&gt;&lt;a href=&quot;#ssss&quot; class=&quot;headerlink&quot; title=&quot;ssss&quot;&gt;&lt;/a&gt;ssss&lt;/h2&gt;&lt;p&gt;sda&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\nabla^2 f = 0&lt;/script&gt;&lt;h2 id=&quot;电磁场与电磁波学习心得&quot;&gt;&lt;a href=&quot;#电磁场与电磁波学习心得&quot; class=&quot;headerlink&quot; title=&quot;电磁场与电磁波学习心得&quot;&gt;&lt;/a&gt;电磁场与电磁波学习心得&lt;/h2&gt;&lt;p&gt;我在本科二年级时学习电磁场与电磁波这门课，但是由于前半部分内容在场论和大学物理中有所涉猎，所以没能给予足够的重视，在加上其他的原因，到学期末并没能良好的掌握其中的基本概念和分析方法，</summary>
+    
+    
+    
+    <category term="基本理论" scheme="http://example.com/categories/%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2022/08/27/hello-world/"/>
+    <id>http://example.com/2022/08/27/hello-world/</id>
+    <published>2022-08-27T08:55:40.094Z</published>
+    <updated>2022-08-28T14:50:00.042Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the<span id="more"></span> answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the</summary>
+    
+    
+    
+    
+  </entry>
+  
+</feed>

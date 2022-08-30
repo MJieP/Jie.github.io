@@ -18,8 +18,8 @@
   
   <entry>
     <title>电容</title>
-    <link href="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/"/>
-    <id>http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/</id>
+    <link href="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9post/"/>
+    <id>http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9post/</id>
     <published>2022-08-28T05:42:51.000Z</published>
     <updated>2022-08-28T14:50:22.568Z</updated>
     
@@ -71,6 +71,30 @@
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>电容</title>
+    <link href="http://example.com/2022/08/21/%E7%94%B5%E5%AE%B9/"/>
+    <id>http://example.com/2022/08/21/%E7%94%B5%E5%AE%B9/</id>
+    <published>2022-08-21T02:47:50.000Z</published>
+    <updated>2022-08-30T09:49:36.480Z</updated>
+    
+    <content type="html"><![CDATA[<p>电阻电容和电感是单板中用到的最多的无源器件，当我还是小白的时候，对不同场景下应该使用哪种类型的阻容感到困惑（其实现在也不是特别懂😅），每当看到不常见的元件出现在板子上的时候，一股上流的气息就铺面而来😆很早就想整理一下关于这些基础器件的知识，尽管规划的时候思路万千，可一旦开始写了，又不知该从何处下笔，奈何自己才疏学浅，只能四处借鉴（求助Google和Wiki</p><h2 id="电容的物理参数和等效模型"><a href="#电容的物理参数和等效模型" class="headerlink" title="电容的物理参数和等效模型"></a>电容的物理参数和等效模型</h2><h3 id="电容的基本原理"><a href="#电容的基本原理" class="headerlink" title="电容的基本原理"></a>电容的基本原理</h3><p>我们从中学时代最先接触的电容便是两个正对的金属极板构成的平行板电容器，时至今日，这仍然是大部分电容的结构，不同是电极材料和中间的介质。电容存储的电量$Q$和电容的自身性质（即电容$C$）和外加电压有关$U$，即<br>$Q=C \cdot U$，<br>$C$表征电容存储电荷的本领，电容越大说明相同电压下能够存储的电荷就越多。对于平行板电容器来说，电容$C$取决于正对面积$S$、板间距$d$、以及板间介质的介电常数$\varepsilon$，即<br>$C=\dfrac{\varepsilon\cdot S}{d}$。</p><p>众所周知，电容具有通交流隔直流的特性，麦克斯韦老先生对此现象做出如下解释：</p><script type="math/tex; mode=display">\nabla\times \vec{H} = \vec{J} + \frac{\partial D}{\partial t}</script><p>交变的电场产生了位移电流，它与传导电流共同作为磁场的旋度源，然鹅由于$\vec{J}=\sigma\cdot\vec{E}$，<br>欧姆定律告诉我们，在电导率$\sigma$很小的电介质中，传导电流几乎不存在（但不是完全没有，这仅存的一点传导电流也成为实际电容器的损耗来源之一），因此电容不能通过直流信号。</p><p>对于正弦交流信号$u = Ucos\omega t$来说，实际通过电容的电流为电流密度乘以面积，而$U=\vec{E}\cdot d$，即：</p><script type="math/tex; mode=display">i = S\cdot \frac{\partial \vec{D}}{\partial t} = S\cdot \varepsilon\frac{\partial \vec{E}}{\partial t} = \dfrac{\varepsilon\cdot S}{d} \cdot \frac{\partial U}{\partial t} = -\frac{U}{1/\omega C}\cdot sin\omega t</script><p>得到了我们熟悉的电容容抗表达式$\dfrac{1}{\omega C}$。</p><h3 id="电容的等效模型"><a href="#电容的等效模型" class="headerlink" title="电容的等效模型"></a>电容的等效模型</h3><p>实际电容的特性都是非理想的，有一些寄生效应，因此，需要用一个较为复杂的模型来表示实际电容，常用的等效模型如下：<br><img style="margin: auto;" src="https://s3.bmp.ovh/imgs/2022/08/30/0333dd172ec05ec6.png"><br>中间的电容C是我们期望的工作参数，相当于电容的标称值，其余均为寄生参数。</p><ul><li>ESR：等效串联电阻，电容器的导线、电极具有一定的电阻率，电介质存在一定的介电损耗，这些损耗统一以等效串联电阻ESR表示。ESR可以认为是在ESL和C发生谐振（交流阻抗为0）频率下测得的值。</li><li>ESL：等效串联电感，电容器的封装引线存在着一定的电感，在高频时影响较大，以等效串联电感ESL表示。</li><li>Rleak：泄漏电阻，也叫绝缘电阻或者等效直流电阻，上面说到，由于介质都不是绝对绝缘的，都存在着一定的导电能力，因此，任何电容都存在着漏电流，以等效电阻Rleak表示。铝电解电容的漏电流在所有电容中漏电流是最大的，漏电流与温度也有非常紧密的关系，温度越高，漏电流越大。绝缘电阻是在20℃（或25℃），施加DC电压，不超过额定定压，测量2分钟平均漏电流，然后用电压除以电流，得到绝缘阻抗。不同材料的绝缘阻抗不同，分布如下：<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/08/30/vh7D6e.png"></li><li>Cd</li><li>Rd</li></ul><h3 id="电容的基本参数"><a href="#电容的基本参数" class="headerlink" title="电容的基本参数"></a>电容的基本参数</h3><h2 id="电容的材料工艺和结构"><a href="#电容的材料工艺和结构" class="headerlink" title="电容的材料工艺和结构"></a>电容的材料工艺和结构</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;电阻电容和电感是单板中用到的最多的无源器件，当我还是小白的时候，对不同场景下应该使用哪种类型的阻容感到困惑（其实现在也不是特别懂😅），每当看到不常见的元件出现在板子上的时候，一股上流的气息就铺面而来😆很早就想整理一下关于这些基础器件的知识，尽管规划的时候思路万千，可一旦</summary>
+      
+    
+    
+    
+    <category term="无源器件" scheme="http://example.com/categories/%E6%97%A0%E6%BA%90%E5%99%A8%E4%BB%B6/"/>
+    
+    
+    <category term="电容" scheme="http://example.com/tags/%E7%94%B5%E5%AE%B9/"/>
     
   </entry>
   

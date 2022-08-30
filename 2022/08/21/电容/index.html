@@ -20,42 +20,23 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="电容笔记-电容外观及部分特性在做电路中经常能遇到不同种类的电容，下面总结不同种类电容的特点，以及如何通过外观大概区分它们。由于电容种类繁多，归类可能略有遗漏和偏差。 电容根据绝缘介质可以做如下分类 铝电解电容铝电解电容是将附有氧化膜">
+  <meta name="description" content="电阻电容和电感是单板中用到的最多的无源器件，当我还是小白的时候，对不同场景下应该使用哪种类型的阻容感到困惑（其实现在也不是特别懂😅），每当看到不常见的元件出现在板子上的时候，一股上流的气息就铺面而来😆很早就想整理一下关于这些基础器件的知识，尽管规划的时候思路万千，可一旦开始写了，又不知该从何处下笔，奈何自己才疏学浅，只能四处借鉴（求助Google和Wiki 电容的物理参数和等效模型电容的基本原">
 <meta property="og:type" content="article">
 <meta property="og:title" content="电容">
-<meta property="og:url" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/index.html">
+<meta property="og:url" content="http://example.com/2022/08/21/%E7%94%B5%E5%AE%B9/index.html">
 <meta property="og:site_name" content="明明的Blog">
-<meta property="og:description" content="电容笔记-电容外观及部分特性在做电路中经常能遇到不同种类的电容，下面总结不同种类电容的特点，以及如何通过外观大概区分它们。由于电容种类繁多，归类可能略有遗漏和偏差。 电容根据绝缘介质可以做如下分类 铝电解电容铝电解电容是将附有氧化膜">
+<meta property="og:description" content="电阻电容和电感是单板中用到的最多的无源器件，当我还是小白的时候，对不同场景下应该使用哪种类型的阻容感到困惑（其实现在也不是特别懂😅），每当看到不常见的元件出现在板子上的时候，一股上流的气息就铺面而来😆很早就想整理一下关于这些基础器件的知识，尽管规划的时候思路万千，可一旦开始写了，又不知该从何处下笔，奈何自己才疏学浅，只能四处借鉴（求助Google和Wiki 电容的物理参数和等效模型电容的基本原">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/贴片铝电解电容.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/低频直插.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/黑高频.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/绿高频.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/固态1.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/固态2.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/固态3.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/牛角.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/螺栓.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/钽电容1.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/钽电容2.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/钽电容3.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/MLCC1.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/MLCC2.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/MLCC3.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/MLCC4.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/瓷片电容.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/Y电容.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/涤纶电容.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/X电容.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/CBB电容.png">
-<meta property="og:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/表格.png">
-<meta property="article:published_time" content="2022-08-28T05:42:51.000Z">
-<meta property="article:modified_time" content="2022-08-28T14:50:22.568Z">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/08/30/0333dd172ec05ec6.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/08/30/vh7D6e.png">
+<meta property="article:published_time" content="2022-08-21T02:47:50.000Z">
+<meta property="article:modified_time" content="2022-08-30T09:49:36.480Z">
 <meta property="article:author" content="明明">
+<meta property="article:tag" content="电容">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/贴片铝电解电容.png">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/08/30/0333dd172ec05ec6.png">
 
-<link rel="canonical" href="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/">
+<link rel="canonical" href="http://example.com/2022/08/21/%E7%94%B5%E5%AE%B9/">
 
 
 <script id="page-configurations">
@@ -179,7 +160,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/21/%E7%94%B5%E5%AE%B9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -201,10 +182,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-08-28 13:42:51 / 修改时间：22:50:22" itemprop="dateCreated datePublished" datetime="2022-08-28T13:42:51+08:00">2022-08-28</time>
+              <time title="创建时间：2022-08-21 10:47:50" itemprop="dateCreated datePublished" datetime="2022-08-21T10:47:50+08:00">2022-08-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-08-30 17:49:36" itemprop="dateModified" datetime="2022-08-30T17:49:36+08:00">2022-08-30</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -216,7 +203,7 @@
             </span>
 
           
-            <span id="/2022/08/28/%E7%94%B5%E5%AE%B9/" class="post-meta-item leancloud_visitors" data-flag-title="电容" title="阅读次数">
+            <span id="/2022/08/21/%E7%94%B5%E5%AE%B9/" class="post-meta-item leancloud_visitors" data-flag-title="电容" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -233,55 +220,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="电容笔记-电容外观及部分特性"><a href="#电容笔记-电容外观及部分特性" class="headerlink" title="电容笔记-电容外观及部分特性"></a>电容笔记-电容外观及部分特性</h2><p>在做电路中经常能遇到不同种类的电容，下面总结不同种类电容的特点，以及如何通过外观大概区分它们。由于电容种类繁多，归类可能略有遗漏和偏差。</p>
-<h3 id="电容根据绝缘介质可以做如下分类"><a href="#电容根据绝缘介质可以做如下分类" class="headerlink" title="电容根据绝缘介质可以做如下分类"></a>电容根据绝缘介质可以做如下分类</h3><ul>
-<li>铝电解电容<br>铝电解电容是将附有氧化膜<span id="more"></span>的铝箔和浸有电解液的衬垫纸，与阴极箔叠片一起卷绕而成。特点是具有容量大、耐电压高、性价比高，常见的封装有贴片型和直插型。<br>贴片铝电解电容一般为白色金属外壳，黑色字符。直插型铝电解电容有普通低频电容(一般为黑壳白字)、黑色高频电容(黑壳黄字，比低频电容黑一些)和绿色高频电容(绿壳黄字)，高频铝电解电容也有紫色外壳的。普通的低频电解电容器在10kHz左右便开始呈现感性，在开关电源滤波时，为了满足大容量的需求，可以选用与低频电解电容相比低ESR的高频铝电解电容，但是高频铝电解电容耐压不如低频铝电解电容，通常在150V以下。<figure>
-<img src="./贴片铝电解电容.png" width=200/ height=160/>
-<img src="./低频直插.png" width=200/ height=160/>
-<img src="./黑高频.png" width=200/ height=160/>
-<!-- <img src="./绿高频.png" width=200/ height=160/> -->
-<img src = 'https://s3.bmp.ovh/imgs/2022/08/28/b02b4e306a27a27b.png' >
-</figure>
-上面所说铝电解电容均为液态电解质，液体电解质那样高温下液体挥发，最后导致电容器爆浆。电解质为固态导电聚合物的铝电解电容又称为固态电容，导电聚合物的导电性能远远高于液态电解液，ESR也更低，但是耐压大多在50V以下，自愈能力也较差。
-固态电容的外壳形状与贴片铝电解电容类似，但是字符颜色一般为彩色，有贴片型和直插型两种封装。
-<figure>
-<img src="./固态1.png" width=200/ height=160/>
-<img src="./固态2.png" width=200/ height=160/>
-<img src="./固态3.png" width=200/ height=160/>
-</figure>
-对于大容量(通常>200uF)，高耐压(通常>200V)的铝电解电容，电极的引出方式略有不同，根据外观可以分为牛角型电解电容和螺栓型铝电解电容(容量通常在2000uF以上)。
-<figure>
-<img src="./牛角.png" width=200/ height=160/>
-<img src="./螺栓.png" width=200/ height=160/>
-</figure></li>
-<li>钽电容<br>钽电容使用金属钽做介质，将钽粉压制成型，在高温炉中烧结成阳极体，其工作电解质为硝酸锰溶液经高温分解形成MnO2，通过石墨层作为引出连接用。钽电容的ESL极小，内部没有电解液，很适合在高温下工作，但是耐压极低，通常不超过50V。钽电容也有直插和贴片两种封装类型。贴片大多为黄色外壳，也有黑色外壳(阴极材料为高分子聚合物)，直插的钽电容比较少见。<figure>
-<img src="./钽电容1.png" width=200/ height=160/>
-<img src="./钽电容2.png" width=200/ height=160/>
-<img src="./钽电容3.png" width=200/ height=160/>
-</figure></li>
-<li>陶瓷电容<br>多层陶瓷电容又名MLCC，是由印好电极（内电极）的陶瓷介质膜片以错位的方式叠合起来，经过一次性高温烧结形成陶瓷芯片，再在芯片的两端封上金属层（外电极），从而形成一个类似独石的结构体。同样，陶瓷电容也有直插和贴片两种封装，其直插封装型也叫独石电容，不同厂家独石电容的外观略有不同。<figure>
-<img src="./MLCC1.png" width=200/ height=160/>
-<img src="./MLCC2.png" width=200/ height=160/>
-<img src="./MLCC3.png" width=200/ height=160/>
-<img src="./MLCC4.png" width=200/ height=160/>
-</figure>  
-陶瓷电容在不同温度、时间、直流偏压下，容值都会发生变化，不同频率的阻抗和ESR也不同。根据温度特性，可以将陶瓷电容分为不同的温度等级。
-只有一层介质的陶瓷电容又称为瓷片电容，瓷片电容一般为砖红色扁平圆片状，体积小，耐压比独石电容高，有一种高压瓷片电容可以用来做安规电容(Y电容)，外观一般为蓝色。
-<figure>
-<img src="./瓷片电容.png" width=200/ height=160/>
-<img src="./Y电容.png" width=200/ height=160/>
-</figure></li>
-<li>薄膜电容<br>塑料薄膜电容，简称为薄膜电容或FK电容，以塑料薄膜为电介质。绝缘阻抗高，介质损失小，耐压值高。薄膜电容种类较多，按电极和电解质的材料可将薄膜电容分为金属化聚酯薄膜电容(涤纶电容)、金属化聚丙烯容(MKP电容)、聚丙烯电容(CBB电容)。涤纶电容一般为绿色，MKP电容常见的是黄色、黑色或者是蓝色的长方体外壳封装，常用来作安规电容，黄色一般做X电容，蓝色做Y电容，CBB电容外观一般为深红色。<br><figure>
-<img src="./涤纶电容.png" width=200/ height=160/>
-<img src="./X电容.png" width=200/ height=160/>
-<img src="./CBB电容.png" width=200/ height=160/>
-</figure><br>薄膜电容还有薄膜微调电容、薄膜可变电容等。</li>
-<li>其他<br>其他介质的电容，比如云母介质的可调电容，纸介电容，空气介质电容。<h3 id="铝电解电容、钽电容、陶瓷电容不同特性的比较"><a href="#铝电解电容、钽电容、陶瓷电容不同特性的比较" class="headerlink" title="铝电解电容、钽电容、陶瓷电容不同特性的比较"></a>铝电解电容、钽电容、陶瓷电容不同特性的比较</h3><figure>
-<img src="./表格.png">
-</figure> 
-</li>
+        <p>电阻电容和电感是单板中用到的最多的无源器件，当我还是小白的时候，对不同场景下应该使用哪种类型的阻容感到困惑（其实现在也不是特别懂😅），每当看到不常见的元件出现在板子上的时候，一股上流的气息就铺面而来😆很早就想整理一下关于这些基础器件的知识，尽管规划的时候思路万千，可一旦开始写了，又不知该从何处下笔，奈何自己才疏学浅，只能四处借鉴（求助Google和Wiki</p>
+<h2 id="电容的物理参数和等效模型"><a href="#电容的物理参数和等效模型" class="headerlink" title="电容的物理参数和等效模型"></a>电容的物理参数和等效模型</h2><h3 id="电容的基本原理"><a href="#电容的基本原理" class="headerlink" title="电容的基本原理"></a>电容的基本原理</h3><p>我们从中学时代最先接触的电容便是两个正对的金属极板构成的平行板电容器，时至今日，这仍然是大部分电容的结构，不同是电极材料和中间的介质。电容存储的电量$Q$和电容的自身性质（即电容$C$）和外加电压有关$U$，即<br>$Q=C \cdot U$，<br>$C$表征电容存储电荷的本领，电容越大说明相同电压下能够存储的电荷就越多。对于平行板电容器来说，电容$C$取决于正对面积$S$、板间距$d$、以及板间介质的介电常数$\varepsilon$，即<br>$C=\dfrac{\varepsilon\cdot S}{d}$。</p>
+<p>众所周知，电容具有通交流隔直流的特性，麦克斯韦老先生对此现象做出如下解释：</p>
+<script type="math/tex; mode=display">\nabla\times \vec{H} = \vec{J} + \frac{\partial D}{\partial t}</script><p>交变的电场产生了位移电流，它与传导电流共同作为磁场的旋度源，然鹅由于$\vec{J}=\sigma\cdot\vec{E}$，<br>欧姆定律告诉我们，在电导率$\sigma$很小的电介质中，传导电流几乎不存在（但不是完全没有，这仅存的一点传导电流也成为实际电容器的损耗来源之一），因此电容不能通过直流信号。</p>
+<p>对于正弦交流信号$u = Ucos\omega t$来说，实际通过电容的电流为电流密度乘以面积，而$U=\vec{E}\cdot d$，即：</p>
+<script type="math/tex; mode=display">i = S\cdot \frac{\partial \vec{D}}{\partial t} = S\cdot \varepsilon\frac{\partial \vec{E}}{\partial t} = \dfrac{\varepsilon\cdot S}{d} \cdot \frac{\partial U}{\partial t} = -\frac{U}{1/\omega C}\cdot sin\omega t</script><p>得到了我们熟悉的电容容抗表达式$\dfrac{1}{\omega C}$。</p>
+<h3 id="电容的等效模型"><a href="#电容的等效模型" class="headerlink" title="电容的等效模型"></a>电容的等效模型</h3><p>实际电容的特性都是非理想的，有一些寄生效应，因此，需要用一个较为复杂的模型来表示实际电容，常用的等效模型如下：<br><img style="margin: auto;" src="https://s3.bmp.ovh/imgs/2022/08/30/0333dd172ec05ec6.png"><br>中间的电容C是我们期望的工作参数，相当于电容的标称值，其余均为寄生参数。</p>
+<ul>
+<li>ESR：等效串联电阻，电容器的导线、电极具有一定的电阻率，电介质存在一定的介电损耗，这些损耗统一以等效串联电阻ESR表示。ESR可以认为是在ESL和C发生谐振（交流阻抗为0）频率下测得的值。</li>
+<li>ESL：等效串联电感，电容器的封装引线存在着一定的电感，在高频时影响较大，以等效串联电感ESL表示。</li>
+<li>Rleak：泄漏电阻，也叫绝缘电阻或者等效直流电阻，上面说到，由于介质都不是绝对绝缘的，都存在着一定的导电能力，因此，任何电容都存在着漏电流，以等效电阻Rleak表示。铝电解电容的漏电流在所有电容中漏电流是最大的，漏电流与温度也有非常紧密的关系，温度越高，漏电流越大。绝缘电阻是在20℃（或25℃），施加DC电压，不超过额定定压，测量2分钟平均漏电流，然后用电压除以电流，得到绝缘阻抗。不同材料的绝缘阻抗不同，分布如下：<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/08/30/vh7D6e.png"></li>
+<li>Cd</li>
+<li>Rd</li>
 </ul>
-
+<h3 id="电容的基本参数"><a href="#电容的基本参数" class="headerlink" title="电容的基本参数"></a>电容的基本参数</h3><h2 id="电容的材料工艺和结构"><a href="#电容的材料工艺和结构" class="headerlink" title="电容的材料工艺和结构"></a>电容的材料工艺和结构</h2>
     </div>
 
     
@@ -289,17 +242,20 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%94%B5%E5%AE%B9/" rel="tag"># 电容</a>
+          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2022/08/27/my-first/" rel="prev" title="my first">
-      <i class="fa fa-chevron-left"></i> my first
-    </a></div>
       <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/08/27/hello-world/" rel="next" title="Hello World">
+      Hello World <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -358,7 +314,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%AC%94%E8%AE%B0-%E7%94%B5%E5%AE%B9%E5%A4%96%E8%A7%82%E5%8F%8A%E9%83%A8%E5%88%86%E7%89%B9%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">电容笔记-电容外观及部分特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E6%A0%B9%E6%8D%AE%E7%BB%9D%E7%BC%98%E4%BB%8B%E8%B4%A8%E5%8F%AF%E4%BB%A5%E5%81%9A%E5%A6%82%E4%B8%8B%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">电容根据绝缘介质可以做如下分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%9D%E7%94%B5%E8%A7%A3%E7%94%B5%E5%AE%B9%E3%80%81%E9%92%BD%E7%94%B5%E5%AE%B9%E3%80%81%E9%99%B6%E7%93%B7%E7%94%B5%E5%AE%B9%E4%B8%8D%E5%90%8C%E7%89%B9%E6%80%A7%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">1.2.</span> <span class="nav-text">铝电解电容、钽电容、陶瓷电容不同特性的比较</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E7%89%A9%E7%90%86%E5%8F%82%E6%95%B0%E5%92%8C%E7%AD%89%E6%95%88%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">电容的物理参数和等效模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">电容的基本原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E7%AD%89%E6%95%88%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">电容的等效模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">电容的基本参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E6%9D%90%E6%96%99%E5%B7%A5%E8%89%BA%E5%92%8C%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">电容的材料工艺和结构</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -374,7 +330,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -383,6 +339,10 @@
           
         <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>

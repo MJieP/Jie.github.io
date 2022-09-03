@@ -22,29 +22,35 @@
 
   <meta name="description" content="电阻电容和电感是单板中用到的最多的无源器件，当我还是小白的时候，对不同场景下应该使用哪种类型的阻容感到困惑（其实现在也不是特别懂😅），每当看到不常见的元件出现在板子上的时候，一股上流的气息就铺面而来😆很早就想整理一下关于这些基础器件的知识，尽管规划的时候思路万千，可一旦开始写了，又不知该从何处下笔，奈何自己才疏学浅，只能四处借鉴（求助Google和Wiki">
 <meta property="og:type" content="article">
-<meta property="og:title" content="电容">
-<meta property="og:url" content="http://example.com/2022/08/21/%E7%94%B5%E5%AE%B9/index.html">
+<meta property="og:title" content="浅谈电容">
+<meta property="og:url" content="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/index.html">
 <meta property="og:site_name" content="明明的Blog">
 <meta property="og:description" content="电阻电容和电感是单板中用到的最多的无源器件，当我还是小白的时候，对不同场景下应该使用哪种类型的阻容感到困惑（其实现在也不是特别懂😅），每当看到不常见的元件出现在板子上的时候，一股上流的气息就铺面而来😆很早就想整理一下关于这些基础器件的知识，尽管规划的时候思路万千，可一旦开始写了，又不知该从何处下笔，奈何自己才疏学浅，只能四处借鉴（求助Google和Wiki">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/08/30/0333dd172ec05ec6.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/08/30/vh7xcF.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/09/02/vITS6U.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/08/30/vh7D6e.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/08/30/vhxv3n.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/08/30/vhzIPJ.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/08/31/v41oJH.jpg">
 <meta property="og:image" content="https://s1.ax1x.com/2022/08/31/v4NjjH.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/09/02/vI5iTI.png">
-<meta property="og:image" content="https://s1.ax1x.com/2022/09/02/vIoEQS.png">
-<meta property="og:image" content="https://s1.ax1x.com/2022/09/02/vITS6U.png">
-<meta property="article:published_time" content="2022-08-21T02:47:50.000Z">
-<meta property="article:modified_time" content="2022-09-02T13:29:53.184Z">
+<meta property="og:image" content="https://s1.ax1x.com/2022/09/03/voebxx.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/09/03/voZxCn.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/09/03/voezIH.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2022/09/03/vo1nBt.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2022/09/03/vodTFs.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2022/09/03/vow010.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/09/03/voDKh9.png">
+<meta property="article:published_time" content="2022-08-28T02:47:50.000Z">
+<meta property="article:modified_time" content="2022-09-03T14:18:50.823Z">
 <meta property="article:author" content="明明">
 <meta property="article:tag" content="电容">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/08/30/0333dd172ec05ec6.png">
 
-<link rel="canonical" href="http://example.com/2022/08/21/%E7%94%B5%E5%AE%B9/">
+<link rel="canonical" href="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/">
 
 
 <script id="page-configurations">
@@ -57,7 +63,7 @@
   };
 </script>
 
-  <title>电容 | 明明的Blog</title>
+  <title>浅谈电容 | 明明的Blog</title>
   
 
 
@@ -168,7 +174,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/21/%E7%94%B5%E5%AE%B9/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/28/%E7%94%B5%E5%AE%B9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -181,7 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          电容
+          浅谈电容
         </h1>
 
         <div class="post-meta">
@@ -191,14 +197,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-08-21 10:47:50" itemprop="dateCreated datePublished" datetime="2022-08-21T10:47:50+08:00">2022-08-21</time>
+              <time title="创建时间：2022-08-28 10:47:50" itemprop="dateCreated datePublished" datetime="2022-08-28T10:47:50+08:00">2022-08-28</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-02 21:29:53" itemprop="dateModified" datetime="2022-09-02T21:29:53+08:00">2022-09-02</time>
+                <time title="修改时间：2022-09-03 22:18:50" itemprop="dateModified" datetime="2022-09-03T22:18:50+08:00">2022-09-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -211,7 +217,7 @@
             </span>
 
           
-            <span id="/2022/08/21/%E7%94%B5%E5%AE%B9/" class="post-meta-item leancloud_visitors" data-flag-title="电容" title="阅读次数">
+            <span id="/2022/08/28/%E7%94%B5%E5%AE%B9/" class="post-meta-item leancloud_visitors" data-flag-title="浅谈电容" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -237,7 +243,7 @@
 <p>上面讨论的是只有两个金属电极的情况，对于有多个带电导体这种更一般的情况，可利用电容系数和部分电容的理论分析各个导体的互电容和对地电容。</p>
 <h3 id="电容的等效模型和基本参数"><a href="#电容的等效模型和基本参数" class="headerlink" title="电容的等效模型和基本参数"></a>电容的等效模型和基本参数</h3><p>实际电容的特性都是非理想的，有一些寄生效应，因此，需要用一个较为复杂的模型来表示实际电容，常用的等效模型如下：<br><img style="margin: auto;" src="https://s3.bmp.ovh/imgs/2022/08/30/0333dd172ec05ec6.png"><br>中间的电容C是我们期望的工作参数，相当于电容的标称值，其余均为寄生参数。</p>
 <ul>
-<li><p>ESR：等效串联电阻，电容器的导线、电极具有一定的电阻率，电介质存在一定的介电损耗，这些损耗统一以等效串联电阻ESR表示。ESR可以认为是在ESL和C发生谐振（交流阻抗为0）频率下测得的值。<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/08/30/vh7xcF.png"><br>但并不是所有厂家都会提供ESR的值，他们也不会针对不同的容值用不同的谐振频率去测量ESR，因为这样耗时耗力。大部分厂家是施加一个直流加固定交流分量，交流分量一般钽电容100KHz，陶瓷电容10MHz，20℃（有些品牌是25℃）环境下，测得的等效串联电阻。ESR越低，对电源分配网络（PDN）越有利，因为PDN追求的是降低整个电源网络的交流阻抗。此外，ESR与电容的功率损耗成正比。一般来说，陶瓷电容的ESR在mΩ级别，钽电容在Ω级别，铝电解电容也在Ω级别，但比钽电容大，有机高分子电容的容量大，体积大，但ESR很低，在毫Ω级别。</p>
+<li><p>ESR：等效串联电阻，电容器的导线、电极具有一定的电阻率，电介质存在一定的介电损耗，这些损耗统一以等效串联电阻ESR表示。ESR可以认为是在ESL和C发生谐振（交流阻抗为0）频率下测得的值。<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/08/30/vh7xcF.png"><br>但并不是所有厂家都会提供ESR的值，他们也不会针对不同的容值用不同的谐振频率去测量ESR，因为这样耗时耗力。大部分厂家是施加一个直流加固定交流分量，交流分量一般钽电容100KHz，陶瓷电容10MHz，20℃（有些品牌是25℃）环境下，测得的等效串联电阻。ESR越低，对电源分配网络（PDN）越有利，因为PDN追求的是降低整个电源网络的交流阻抗。此外，ESR与电容的功率损耗成正比。一般来说，陶瓷电容的ESR在mΩ级别，钽电容在Ω级别，铝电解电容也在Ω级别，但比钽电容大，有机高分子电容的容量大，体积大，但ESR很低，在毫Ω级别。MLCC电容具有仅次于液体电解质钽电容的ESR，是mΩ级别，不同电容的ESR可参考下图：<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/02/vITS6U.png"></p>
 </li>
 <li><p>ESL：等效串联电感，电容器的封装引线存在着一定的电感，在高频时影响较大，以等效串联电感ESL表示，由于ESL的存在，与C一起构成了一个谐振电路，其谐振频率便是电容的自谐振频率。在自谐振频率前，电容的阻抗随着频率增加而变小；在自谐振频率后，电容的阻抗随着频率增加而变小，就呈现感性。</p>
 </li>
@@ -255,7 +261,7 @@
 <p>对于电容器来说，不光有介质损耗，还有导体损耗，因此电容的损耗正切与ESR密切相关。品质因数Q也是描述电容器损耗的物理量，也就是电容的储存功率与损耗功率的比，即容抗和ESR之比：$Q = \dfrac{1/\omega C}{ESR} = \dfrac{1}{DF}$。</p>
 </li>
 </ul>
-<h2 id="电容的材料工艺和结构"><a href="#电容的材料工艺和结构" class="headerlink" title="电容的材料工艺和结构"></a>电容的材料工艺和结构</h2><p>电介质的性能影响着电容的性能，不同的介质适用于不同的制造工艺。电容的制造工艺主要可以分为三大类：</p>
+<h2 id="电容的材料工艺"><a href="#电容的材料工艺" class="headerlink" title="电容的材料工艺"></a>电容的材料工艺</h2><p>电介质的性能影响着电容的性能，不同的介质适用于不同的制造工艺。电容的制造工艺主要可以分为三大类：</p>
 <ul>
 <li>电解电容(Electrolytic Capacitor)</li>
 <li>陶瓷电容(Ceramic Capacitor)</li>
@@ -277,14 +283,35 @@
 </ul>
 <h4 id="钽电容和铌电容"><a href="#钽电容和铌电容" class="headerlink" title="钽电容和铌电容"></a>钽电容和铌电容</h4><p>钽电容有固体钽电容和液体（湿式）钽电容，容量都很大，但耐压很低，为了安全通常折半使用。液体钽电容较为少见，但CV值更高，容量高达数千uF，并且能够在超过100V至高达630V的电压下工作，具有相对较低的ESR，在所有电解电容器中具有最低的漏电流，大多用于军工领域。</p>
 <p>铌电解电容与钽电解电容类似，就是铌及其氧化物代替钽，铌氧化物(五氧化二铌)的介电常数比钽氧化物(五氧化二钽)更高，铌电容的性能更加稳定，可靠性更高，价格越贵😭。</p>
-<h3 id="陶瓷电容"><a href="#陶瓷电容" class="headerlink" title="陶瓷电容"></a>陶瓷电容</h3><p>陶瓷电容是以陶瓷材料作为介质材料，陶瓷材料有很多种，介电常数、稳定性都有不同，适用于不同的场合。陶瓷电容主要有盘式（瓷片电容）和叠层式（MLCC）两种。瓷片电容是通过在陶瓷盘的两侧涂覆银触点来制造的，通常是通孔元件，尺寸比较大。电容值为10pF-100μF，具有16V至15kV及以上的耐压，高压的瓷片电容常作为电源安规Y电容，用来抑制共模干扰。最常见的陶瓷电容通常是多层瓷介陶瓷电容MLCC，体积很小，可以做到01005封装，绝缘电阻在数GΩ以上，漏电流很小，它的结构如下：<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/02/vI5iTI.png"><br>陶瓷介质主要分为四类：</p>
+<h3 id="陶瓷电容"><a href="#陶瓷电容" class="headerlink" title="陶瓷电容"></a>陶瓷电容</h3><p>陶瓷电容是以陶瓷材料作为介质材料，陶瓷材料有很多种，介电常数、稳定性都有不同，适用于不同的场合。陶瓷电容主要有盘式（瓷片电容）和叠层式（MLCC）两种。瓷片电容是通过在陶瓷盘的两侧涂覆银触点来制造的，通常是通孔元件，尺寸比较大。电容值为10pF-100μF，具有16V至15kV及以上的耐压，高压的瓷片电容常作为电源安规Y电容，用来抑制共模干扰。最常见的陶瓷电容通常是多层瓷介陶瓷电容MLCC，体积很小，可以做到01005封装，绝缘电阻在数GΩ以上，漏电流很小，它的结构如下：<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/02/vI5iTI.png"></p>
 <ul>
-<li>Class I：具有温度补偿特性的陶瓷介质，其介电常数大都较低，不超过200。通常都是顺电性介质(Paraelectric)，在不同的温度、频率以及偏置电压下，介电常数比较稳定，变化较小。损耗也很低，耗散因数小于0.01。性质最稳定，应用最多的是C0G电容，也就是NP0。NP0是IEC/EN 60384-1标准中规定的代号，即Negative Positive Zero，陶瓷电容的介质代号以及失效分析可以看<a target="_blank" rel="noopener" href="https://www.psma.com/sites/default/files/uploads/files/Ceramic%20Capacitor%20Basics.pdf">这里</a>。</li>
-<li>Class II，III：其中，Class II介电常数几千左右，Class III介电常数最高可以到20000，Class III的性能更加不稳定。根据IEC的分类，Class II和III都属于第二类，高介电常数介质（高K介质）。像X5R和X7R都是Class II电容，在电源去耦中应用较多，而Y5V属于Class III电容，性能不太稳定，现在应用不多了。由于Class II和III电容的容值最高可以做到几百uF，但由于高介电常数介质，大都是铁电性介质(Ferroelectric)，温度稳定性差。此外，铁电性介质，在直流偏置电压下介电常数会下降，这是因为对于铁电性介质存在电滞现象，当内部电场超过一定值时，会发生电饱和现象，导致介电常数下降。不同材质电容的直流性能如下：<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/02/vIoEQS.png"></li>
+<li>Class I：具有温度补偿特性的陶瓷介质，其介电常数大都较低，不超过200。通常都是顺电性介质(Paraelectric)，在不同的温度、频率以及偏置电压下，介电常数比较稳定，变化较小。损耗也很低，耗散因数小于0.01。性质最稳定，应用最多的是C0G电容，也就是NP0，适用于谐振、匹配、滤波等高频电路，陶瓷电容的介质代号以及失效分析可以看<a target="_blank" rel="noopener" href="https://www.psma.com/sites/default/files/uploads/files/Ceramic%20Capacitor%20Basics.pdf">这里</a>。下图是Murata一款1000pF电容的直流、交流及温度特性：<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/03/voebxx.png"><br>即便是同一电介质（如C0G），也分为不同的系列，例如GRM是普通系列，GJM是高Q值系列、GQM是高频系列，GQM系列高频性能更好，自谐振频率和Q值更高，一些高频性能要求很高的场合，可以选用容差1%的产品。而GRM系列比较便宜，更加通用，例如EMC滤波。下图是Murata的3款相同封装（0402）相同容差（5%）的10pF电容的频率特性对比。<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/03/voZxCn.png">  </li>
+<li>Class II，III：其中，Class II介电常数几千左右，Class III介电常数最高可以到20000，Class III的性能更加不稳定。根据IEC的分类，Class II和III都属于第二类，高介电常数介质（高K介质）。像X5R和X7R都是Class II电容，在电源去耦中应用较多，而Y5V属于Class III电容，性能不太稳定，现在应用不多了。由于Class II和III电容的容值最高可以做到几百uF，但由于高介电常数介质，大都是铁电性介质，温度稳定性差。此外，铁电性介质，在直流偏置电压下介电常数会下降，这是因为对于铁电性介质存在电滞现象，当内部电场超过一定值时，会发生电饱和现象，导致介电常数下降，钛酸钡系铁电体的高介电常数（Class2）类片状多层陶瓷电容器会出现这种现象，导电性高分子的铝电解电容器（高分子AI）和导电性高分子钽电解电容器（高分子Ta）、薄膜电容器（Film）、氧化钛和使用了锆酸钙系顺电体的温度补偿用MLCC上几乎不会发生这种现象。下图是Murata一款22uF、6.3V、X5R电容的交直流和温度特性：<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/03/voezIH.jpg"></li>
 </ul>
-<p>MLCC电容具有仅次于液体电解质钽电容的ESR，是mΩ级别，不同电容的ESR可参考下图：<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/02/vITS6U.png"></p>
-<h3 id="薄膜电容"><a href="#薄膜电容" class="headerlink" title="薄膜电容"></a>薄膜电容</h3><blockquote>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="http://emakerzone.com/article/229">http://emakerzone.com/article/229</a><br><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Electrolytic_capacitor">https://en.wikipedia.org/wiki/Electrolytic_capacitor</a><br><a target="_blank" rel="noopener" href="https://www.chemi-con.co.jp/products/relatedfiles/capacitor/catalog/al-precaution-c.pdf">https://www.chemi-con.co.jp/products/relatedfiles/capacitor/catalog/al-precaution-c.pdf</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/AirCity123/article/details/104139988">https://blog.csdn.net/AirCity123/article/details/104139988</a><br><a target="_blank" rel="noopener" href="https://www.psma.com/sites/default/files/uploads/files/Ceramic%20Capacitor%20Basics.pdf">https://www.psma.com/sites/default/files/uploads/files/Ceramic%20Capacitor%20Basics.pdf</a></p>
+<h3 id="薄膜电容"><a href="#薄膜电容" class="headerlink" title="薄膜电容"></a>薄膜电容</h3><p>薄膜电容是通过将两片带有金属电极的塑料膜卷绕成一个圆柱形，最后封装成型，由于其介质通常是塑料材料，也称为塑料薄膜电容。现代薄膜电容器内部结构的一个关键优势是直接接触绕组两端的电极，这种接触使通向整个电极的所有电流路径都非常短，该设置的行为类似于大量并联的单个电容器，从而降低了内部欧姆损耗（ESR）和寄生电感（ESL）。薄膜电容器结构的固有几何形状导致非常低的欧姆损耗和非常低的寄生电感，这使得它们特别适用于具有非常高的浪涌电流（缓冲器）的应用和交流电源应用，或更高频率的应用。<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/03/vo1nBt.jpg"><br>薄膜电容器的另一个特点是可以为介电层选择不同的薄膜材料，以选择所需的电气特性，例如稳定性、宽温度范围或承受极高电压的能力。聚丙烯薄膜电容器因其低电损耗和在非常宽的频率范围内接近线性的特性而被指定用于谐振电路中。对于简单的高频滤波电路，聚酯电容器提具有出色长期稳定性且低成本，可以替代更昂贵的钽电解电容器. 塑料薄膜电容器的薄膜/箔变体特别能够处理高和非常高的浪涌电流。</p>
+<p>薄膜电容有两种卷绕方法：一种是有感绕法：在卷绕前，引线就已经和内部电极连在一起。一种是无感绕法：在绕制后，会采用镀金等工艺，将两个端面的内部电极连成一个面，这样可以获得较小的ESL，应该高频性能较高。此外，还有一种叠层型的无感电容，结构与MLCC类似，性能较好，便于做成SMD封装。<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/03/vodTFs.jpg"><br>薄膜电容根据其电极的制作工艺，可以分为两类：</p>
+<ul>
+<li>金属箔薄膜电容（Film/Foil）：直接在塑料膜上加一层薄金属箔，通常是铝箔，作为电极，这种工艺较为简单，电极方便引出，可以应用于大电流场合。</li>
+<li>金属化薄膜电容（Metallized Film）：金属化薄膜电容，通过真空沉积工艺直接在塑料膜的表面形成一个很薄的金属表面，作为电极，电极厚度很薄，可以绕制成更大容量的电容，但由于电极厚度薄，只适用于小电流场合。金属化薄膜电容具有自我修复的功能，假如电容内部有击穿损坏点，会在损坏处产生雪崩效应，气化金属在损坏处将形成一个气化集合面，损坏点被修复，因此，金属化薄膜电容可靠性非常高，不存在短路失效。</li>
+</ul>
+<p>最早的薄膜电容的介质材料是用纸浸注在油或石蜡中，工作电压很高。现在多用塑料材料，也就是高分子聚合物，常用的膜材料有<strong>聚丙烯（PP）</strong>，<strong>聚</strong>对苯二甲酸乙二醇酯<strong>酯</strong> <strong>（PET）</strong>，聚苯硫醚（PPS），聚萘二甲酸乙二醇酯（PEN），聚碳酸酯（PC），聚苯乙烯（PS）和聚四氟乙烯（PTFE），使用最多的薄膜材料是聚丙烯，市场份额为50%，其次是聚酯，份额为40%。其余10% 的份额由其他介电材料占据，包括聚苯硫醚和纸，各占约3%。不同的薄膜材料在其特性上具有与温度和频率相关的差异，下图显示了不同薄膜材料的电容的典型温度和频率行为：<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/03/vow010.png"><br>PP薄膜电容器的介电吸收最低，这使其适用于VCO定时电容器、采样保持应用和音频电路等应用。PP薄膜电容的耗散因数比其他薄膜电容要小，在宽温度和频率范围内具有低且非常稳定的损耗因数，PP薄膜电容器用于交流电源应用，例如电机运行电容或功率因数校正（PFC）电容。PP薄膜电容器广泛用于EMI抑制，包括直接连接到电源，作为安规X电容（MKP）。</p>
+<h3 id="超级电容"><a href="#超级电容" class="headerlink" title="超级电容"></a>超级电容</h3><p>超级电容也称为法拉电容，是一种高容量电容器，其电容值远高于其他电容器，通常可以做到法拉级别，但耐压电压较低，弥合了电解电容器和可充电电池之间的差距。可以比电池更快地接受和传递电荷，并且比可充电电池承受更多的充电和放电循环。当向超级电容器施加电压时，在表面上产生两个单独的电荷层，其间隔距离小于传统电容器的间隔距离。这就是超级电容器通常被称为双层电容器或EDLC的原因。<br><img style="margin: auto;" src="https://s1.ax1x.com/2022/09/03/voDKh9.png"><br>超级电容的存储机制主要有以下三种：</p>
+<ul>
+<li>双电层电容储存机制</li>
+<li>赝电容储存机制</li>
+<li>法拉第反应储存机制</li>
+</ul>
+<p>由于我对这方面了解甚少，就不做过多阐述（不献丑了😅。详细的分析可以看<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Supercapacitor#Basic_design">WiKi</a>或者<a target="_blank" rel="noopener" href="https://news.bjx.com.cn/html/20190725/995242.shtml">这里</a>。</p>
+<blockquote>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://emakerzone.com/article/229">http://emakerzone.com/article/229</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Electrolytic_capacitor">https://en.wikipedia.org/wiki/Electrolytic_capacitor</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.chemi-con.co.jp/products/relatedfiles/capacitor/catalog/al-precaution-c.pdf">https://www.chemi-con.co.jp/products/relatedfiles/capacitor/catalog/al-precaution-c.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/AirCity123/article/details/104139988">https://blog.csdn.net/AirCity123/article/details/104139988</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.psma.com/sites/default/files/uploads/files/Ceramic%20Capacitor%20Basics.pdf">https://www.psma.com/sites/default/files/uploads/files/Ceramic%20Capacitor%20Basics.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hans/%E7%94%B5%E5%AE%B9%E5%99%A8">https://zh.wikipedia.org/zh-hans/%E7%94%B5%E5%AE%B9%E5%99%A8</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Film_capacitor#Disadvantages">https://en.wikipedia.org/wiki/Film_capacitor#Disadvantages</a></li>
+</ul>
 </blockquote>
 
     </div>
@@ -359,7 +386,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E7%89%A9%E7%90%86%E5%8F%82%E6%95%B0%E5%92%8C%E7%AD%89%E6%95%88%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">电容的物理参数和等效模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">电容的基本原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E7%AD%89%E6%95%88%E6%A8%A1%E5%9E%8B%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">电容的等效模型和基本参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E6%9D%90%E6%96%99%E5%B7%A5%E8%89%BA%E5%92%8C%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">电容的材料工艺和结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E8%A7%A3%E7%94%B5%E5%AE%B9"><span class="nav-number">2.1.</span> <span class="nav-text">电解电容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%93%9D%E7%94%B5%E8%A7%A3%E7%94%B5%E5%AE%B9"><span class="nav-number">2.1.1.</span> <span class="nav-text">铝电解电容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%92%BD%E7%94%B5%E5%AE%B9%E5%92%8C%E9%93%8C%E7%94%B5%E5%AE%B9"><span class="nav-number">2.1.2.</span> <span class="nav-text">钽电容和铌电容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%B6%E7%93%B7%E7%94%B5%E5%AE%B9"><span class="nav-number">2.2.</span> <span class="nav-text">陶瓷电容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%96%84%E8%86%9C%E7%94%B5%E5%AE%B9"><span class="nav-number">2.3.</span> <span class="nav-text">薄膜电容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E7%89%A9%E7%90%86%E5%8F%82%E6%95%B0%E5%92%8C%E7%AD%89%E6%95%88%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">电容的物理参数和等效模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">电容的基本原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E7%AD%89%E6%95%88%E6%A8%A1%E5%9E%8B%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">电容的等效模型和基本参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9%E7%9A%84%E6%9D%90%E6%96%99%E5%B7%A5%E8%89%BA"><span class="nav-number">2.</span> <span class="nav-text">电容的材料工艺</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E8%A7%A3%E7%94%B5%E5%AE%B9"><span class="nav-number">2.1.</span> <span class="nav-text">电解电容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%93%9D%E7%94%B5%E8%A7%A3%E7%94%B5%E5%AE%B9"><span class="nav-number">2.1.1.</span> <span class="nav-text">铝电解电容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%92%BD%E7%94%B5%E5%AE%B9%E5%92%8C%E9%93%8C%E7%94%B5%E5%AE%B9"><span class="nav-number">2.1.2.</span> <span class="nav-text">钽电容和铌电容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%B6%E7%93%B7%E7%94%B5%E5%AE%B9"><span class="nav-number">2.2.</span> <span class="nav-text">陶瓷电容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%96%84%E8%86%9C%E7%94%B5%E5%AE%B9"><span class="nav-number">2.3.</span> <span class="nav-text">薄膜电容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E7%BA%A7%E7%94%B5%E5%AE%B9"><span class="nav-number">2.4.</span> <span class="nav-text">超级电容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
